@@ -6,12 +6,15 @@
 //  Copyright © 2021 alumnos. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import SwiftUI
 import AVKit
 
 
-class ViewController: UIViewController, AVAudioPlayerDelegate {
+class VoiceRecognitionViewController: UIViewController, AVAudioPlayerDelegate, VoiceRecognitionViewControllerProtocol {
+    
+    var voiceRecognitionPresenterProtocol : VoiceRecognitionPresenterProtocol?
     
     var longgesture : UILongPressGestureRecognizer?
 
@@ -22,10 +25,12 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        self.voiceRecognitionPresenterProtocol = VoiceRecognitionPresenterController(voiceRecognitionViewProtocol: self)
+        
         micButton.setImage(UIImage(named: "Mic Off"), for: .normal)
         
-        micButton.addTarget(self, action: #selector(ViewController.touchDownEvent), for: .touchDown)
-        micButton.addTarget(self, action: #selector(ViewController.touchUpEvent), for: [.touchUpInside, .touchUpOutside])
+        micButton.addTarget(self, action: #selector(VoiceRecognitionViewController.touchDownEvent), for: .touchDown)
+        micButton.addTarget(self, action: #selector(VoiceRecognitionViewController.touchUpEvent), for: [.touchUpInside, .touchUpOutside])
 
         let file = "recording.wav"
         let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -75,15 +80,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         }catch{
             print("AVAudioPlayer init failed")
         }
-
-        
-        
-        
-        
     }
-
-
-
-    
 }
 
+protocol VoiceRecognitionViewControllerProtocol : class{
+    //ADD FUNCTIONS
+}

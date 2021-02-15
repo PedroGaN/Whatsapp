@@ -7,19 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FD0A33525DAFB0900673C24 /* VoiceRecognitionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD0A33425DAFB0900673C24 /* VoiceRecognitionPresenter.swift */; };
+		1FD0A33B25DAFBB300673C24 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD0A33A25DAFBB300673C24 /* MainViewController.swift */; };
+		1FD0A33F25DAFBE400673C24 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD0A33E25DAFBE400673C24 /* MainPresenter.swift */; };
+		1FD0A34225DAFC0700673C24 /* VideoplayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD0A34125DAFC0700673C24 /* VideoplayerViewController.swift */; };
+		1FD0A34525DAFC2300673C24 /* VideoplayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD0A34425DAFC2300673C24 /* VideoplayerPresenter.swift */; };
 		7F20690D25D5A73200121268 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F20690C25D5A73200121268 /* AppDelegate.swift */; };
 		7F20690F25D5A73200121268 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F20690E25D5A73200121268 /* SceneDelegate.swift */; };
-		7F20691125D5A73200121268 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F20691025D5A73200121268 /* ViewController.swift */; };
+		7F20691125D5A73200121268 /* VoiceRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F20691025D5A73200121268 /* VoiceRecognitionViewController.swift */; };
 		7F20691425D5A73200121268 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F20691225D5A73200121268 /* Main.storyboard */; };
 		7F20691625D5A73400121268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F20691525D5A73400121268 /* Assets.xcassets */; };
 		7F20691925D5A73400121268 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F20691725D5A73400121268 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FD0A33425DAFB0900673C24 /* VoiceRecognitionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecognitionPresenter.swift; sourceTree = "<group>"; };
+		1FD0A33A25DAFBB300673C24 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1FD0A33E25DAFBE400673C24 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		1FD0A34125DAFC0700673C24 /* VideoplayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoplayerViewController.swift; sourceTree = "<group>"; };
+		1FD0A34425DAFC2300673C24 /* VideoplayerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoplayerPresenter.swift; sourceTree = "<group>"; };
 		7F20690925D5A73200121268 /* Whatsapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whatsapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F20690C25D5A73200121268 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F20690E25D5A73200121268 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7F20691025D5A73200121268 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7F20691025D5A73200121268 /* VoiceRecognitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecognitionViewController.swift; sourceTree = "<group>"; };
 		7F20691325D5A73200121268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7F20691525D5A73400121268 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F20691825D5A73400121268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +47,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FD0A33125DAFA4600673C24 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1FD0A33925DAFB4400673C24 /* VideoplayerModule */,
+				1FD0A33825DAFB1200673C24 /* MainViewModule */,
+				1FD0A33325DAFAD100673C24 /* VoiceRecognitionModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1FD0A33325DAFAD100673C24 /* VoiceRecognitionModule */ = {
+			isa = PBXGroup;
+			children = (
+				7F20691025D5A73200121268 /* VoiceRecognitionViewController.swift */,
+				1FD0A33425DAFB0900673C24 /* VoiceRecognitionPresenter.swift */,
+			);
+			path = VoiceRecognitionModule;
+			sourceTree = "<group>";
+		};
+		1FD0A33825DAFB1200673C24 /* MainViewModule */ = {
+			isa = PBXGroup;
+			children = (
+				1FD0A33A25DAFBB300673C24 /* MainViewController.swift */,
+				1FD0A33E25DAFBE400673C24 /* MainPresenter.swift */,
+			);
+			path = MainViewModule;
+			sourceTree = "<group>";
+		};
+		1FD0A33925DAFB4400673C24 /* VideoplayerModule */ = {
+			isa = PBXGroup;
+			children = (
+				1FD0A34125DAFC0700673C24 /* VideoplayerViewController.swift */,
+				1FD0A34425DAFC2300673C24 /* VideoplayerPresenter.swift */,
+			);
+			path = VideoplayerModule;
+			sourceTree = "<group>";
+		};
 		7F20690025D5A73200121268 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +103,9 @@
 		7F20690B25D5A73200121268 /* Whatsapp */ = {
 			isa = PBXGroup;
 			children = (
+				1FD0A33125DAFA4600673C24 /* Modules */,
 				7F20690C25D5A73200121268 /* AppDelegate.swift */,
 				7F20690E25D5A73200121268 /* SceneDelegate.swift */,
-				7F20691025D5A73200121268 /* ViewController.swift */,
 				7F20691225D5A73200121268 /* Main.storyboard */,
 				7F20691525D5A73400121268 /* Assets.xcassets */,
 				7F20691725D5A73400121268 /* LaunchScreen.storyboard */,
@@ -138,8 +185,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F20691125D5A73200121268 /* ViewController.swift in Sources */,
+				1FD0A34525DAFC2300673C24 /* VideoplayerPresenter.swift in Sources */,
+				1FD0A33B25DAFBB300673C24 /* MainViewController.swift in Sources */,
+				7F20691125D5A73200121268 /* VoiceRecognitionViewController.swift in Sources */,
+				1FD0A33F25DAFBE400673C24 /* MainPresenter.swift in Sources */,
+				1FD0A33525DAFB0900673C24 /* VoiceRecognitionPresenter.swift in Sources */,
 				7F20690D25D5A73200121268 /* AppDelegate.swift in Sources */,
+				1FD0A34225DAFC0700673C24 /* VideoplayerViewController.swift in Sources */,
 				7F20690F25D5A73200121268 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
