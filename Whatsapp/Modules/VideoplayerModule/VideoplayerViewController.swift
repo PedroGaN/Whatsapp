@@ -17,9 +17,34 @@ class VideoplayerViewController: UIViewController, VideoplayerViewProtocol {
         super.viewDidLoad()
         
         self.videoplayerPresenterProtocol = VideoplayerPresenter(videoplayerViewProtocol: self)
+        
+        let leftRecognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "swipeLeft:")
+        leftRecognizer.direction = .left
+        self.view.addGestureRecognizer(leftRecognizer)
+        
+        let rightRecognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "swipeRight:")
+        rightRecognizer.direction = .right
+        self.view.addGestureRecognizer(rightRecognizer)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        playVideo()
+    }
+    
+    func playVideo(){
+        self.videoplayerPresenterProtocol?.playVideo(from: "videoplayback")
+    }
+    func swipeLeft(recognizer: UISwipeGestureRecognizer) {
+        self.performSegue(withIdentifier: "videoToImage", sender: self)
+    }
+    func swipeRight(recognizer: UISwipeGestureRecognizer) {
+        self.performSegue(withIdentifier: "micSegue", sender: self)
     }
     
 }
+
+
 
 protocol VideoplayerViewProtocol : class {
     //ADD FUNCTIONS

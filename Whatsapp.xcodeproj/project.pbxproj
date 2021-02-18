@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F5AB80A25DEF211005A2549 /* videoplayback.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1F5AB80925DEF211005A2549 /* videoplayback.mp4 */; };
 		1FD0A33525DAFB0900673C24 /* VoiceRecognitionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD0A33425DAFB0900673C24 /* VoiceRecognitionPresenter.swift */; };
 		1FD0A33B25DAFBB300673C24 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD0A33A25DAFBB300673C24 /* MainViewController.swift */; };
 		1FD0A33F25DAFBE400673C24 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD0A33E25DAFBE400673C24 /* MainPresenter.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F5AB80925DEF211005A2549 /* videoplayback.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = videoplayback.mp4; sourceTree = "<group>"; };
 		1FD0A33425DAFB0900673C24 /* VoiceRecognitionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecognitionPresenter.swift; sourceTree = "<group>"; };
 		1FD0A33A25DAFBB300673C24 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1FD0A33E25DAFBE400673C24 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F5AB80325DEEB1E005A2549 /* AVResources */ = {
+			isa = PBXGroup;
+			children = (
+				1F5AB80925DEF211005A2549 /* videoplayback.mp4 */,
+			);
+			path = AVResources;
+			sourceTree = "<group>";
+		};
 		1FD0A33125DAFA4600673C24 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 		7F20690B25D5A73200121268 /* Whatsapp */ = {
 			isa = PBXGroup;
 			children = (
+				1F5AB80325DEEB1E005A2549 /* AVResources */,
 				1FD0A33125DAFA4600673C24 /* Modules */,
 				7F20690C25D5A73200121268 /* AppDelegate.swift */,
 				7F20690E25D5A73200121268 /* SceneDelegate.swift */,
@@ -174,6 +185,7 @@
 			files = (
 				7F20691925D5A73400121268 /* LaunchScreen.storyboard in Resources */,
 				7F20691625D5A73400121268 /* Assets.xcassets in Resources */,
+				1F5AB80A25DEF211005A2549 /* videoplayback.mp4 in Resources */,
 				7F20691425D5A73200121268 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

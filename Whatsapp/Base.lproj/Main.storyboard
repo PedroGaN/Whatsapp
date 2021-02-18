@@ -1,38 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fev-gc-eMB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mwx-L0-cb4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Voice Recognition View Controller-->
         <scene sceneID="QVC-Lt-jw7">
             <objects>
-                <viewController id="fev-gc-eMB" customClass="ViewController" customModule="Whatsapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="fev-gc-eMB" customClass="VoiceRecognitionViewController" customModule="Whatsapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xj5-Gq-OjX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Aqui está lo que vas hablando..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kWK-YW-bgs">
                                 <rect key="frame" x="50" y="74" width="314" height="120"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="y48-qo-paH"/>
                                 </constraints>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxk-qk-WPf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxk-qk-WPf">
                                 <rect key="frame" x="50" y="204" width="314" height="35"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="2CJ-xj-Jpf"/>
                                 </constraints>
                                 <state key="normal" title="Reset">
-                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemRedColor"/>
                                 </state>
                                 <connections>
                                     <action selector="resetButton:" destination="fev-gc-eMB" eventType="touchUpInside" id="ytl-xF-99c"/>
@@ -46,7 +48,8 @@
                                 </constraints>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="B7m-Nr-Hix"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="pxk-qk-WPf" firstAttribute="leading" secondItem="B7m-Nr-Hix" secondAttribute="leading" constant="50" id="5P4-hU-aNI"/>
                             <constraint firstItem="B7m-Nr-Hix" firstAttribute="trailing" secondItem="pKN-Uw-QxM" secondAttribute="trailing" constant="140" id="8oj-ss-hor"/>
@@ -58,16 +61,85 @@
                             <constraint firstItem="kWK-YW-bgs" firstAttribute="top" secondItem="B7m-Nr-Hix" secondAttribute="top" constant="30" id="kp4-zD-GCt"/>
                             <constraint firstItem="pKN-Uw-QxM" firstAttribute="top" secondItem="pxk-qk-WPf" secondAttribute="bottom" constant="50" id="uSp-O3-TY0"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="B7m-Nr-Hix"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Dnk-3L-XbC"/>
                     <connections>
                         <outlet property="micButton" destination="pKN-Uw-QxM" id="E25-Yf-B5e"/>
                         <outlet property="textField" destination="kWK-YW-bgs" id="rLR-Ss-jsb"/>
+                        <segue destination="07K-pM-H7a" kind="show" identifier="micToVideo" id="ce5-Mq-YDC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="55q-bY-b9B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-100.00000000000001" y="-565.17857142857144"/>
         </scene>
+        <!--Videoplayer View Controller-->
+        <scene sceneID="nS8-65-Iw2">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="07K-pM-H7a" customClass="VideoplayerViewController" customModule="Whatsapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6mg-FI-5bH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Xv6-9U-EkJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aVd-UH-LhZ"/>
+                    <connections>
+                        <segue destination="fev-gc-eMB" kind="show" identifier="micSegue" id="C63-Ho-4VS"/>
+                        <segue destination="mwx-L0-cb4" kind="show" identifier="videoToImage" id="pmB-vS-HHa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GUR-aQ-YFU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-790" y="-565"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="V5c-dI-5Wa">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="mwx-L0-cb4" customClass="MainViewController" customModule="Whatsapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dT3-Ya-fYk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a7H-mL-cZx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BkT-nY-8gg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a7H-mL-cZx" firstAttribute="top" secondItem="BkT-nY-8gg" secondAttribute="top" id="BCJ-Vo-NgV"/>
+                            <constraint firstItem="BkT-nY-8gg" firstAttribute="trailing" secondItem="a7H-mL-cZx" secondAttribute="trailing" id="DFG-cc-njj"/>
+                            <constraint firstItem="BkT-nY-8gg" firstAttribute="bottom" secondItem="a7H-mL-cZx" secondAttribute="bottom" id="niI-rw-hly"/>
+                            <constraint firstItem="a7H-mL-cZx" firstAttribute="leading" secondItem="BkT-nY-8gg" secondAttribute="leading" id="ynY-9n-TcT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZEY-U3-97X"/>
+                    <connections>
+                        <outlet property="imageView" destination="a7H-mL-cZx" id="3eQ-fY-dso"/>
+                        <segue destination="07K-pM-H7a" kind="show" identifier="videoSegue" id="NwA-Is-RZY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B1H-h2-5Aq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1513" y="-565"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="NwA-Is-RZY"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

@@ -40,6 +40,14 @@ class VoiceRecognitionViewController: UIViewController, AVAudioPlayerDelegate, V
         try! session.setCategory(AVAudioSession.Category.playAndRecord)
         self.recorder = try! AVAudioRecorder(url: url!, settings: [:])
         
+        let leftRecognizer: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: "swipeLeft:")
+        leftRecognizer.direction = .left
+        self.view.addGestureRecognizer(leftRecognizer)
+        
+    }
+    
+    func swipeLeft(recognizer: UISwipeGestureRecognizer) {
+        self.performSegue(withIdentifier: "micToVideo", sender: self)
     }
 
     @IBOutlet weak var micButton: UIButton!
